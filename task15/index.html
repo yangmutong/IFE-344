@@ -28,7 +28,30 @@
 <button id="sort-btn">排序</button>
 
 <script type="text/javascript">
-
+        var EventUtil = {
+      addHandler:function(element,type,handler){
+        if (element.addEventListener) {
+          element.addEventListener(type,handler,false);
+        }
+        else if (element.attachEvent) {
+          element.attachEvent("on" + type,handler);
+        }
+        else{
+          element["on" + type] = handler;
+        }
+      },
+      removeHandler:function(element,type,handler){
+        if (element.removeEventListener) {
+          element.removeEventListener(type,handler,false);
+        }
+        else if (element.attachEvent) {
+          element.detachEvent("on" + type,handler);
+        }
+        else{
+          element["on" + type] = null;
+        }
+      }
+    };
     /**
      * getData方法
      * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
@@ -81,8 +104,7 @@
 
 
     function init() {
-        document.getElementById("sort-btn").addEventListener("click",btnHandle,false);
-
+        EventUtil.addHandler(document.getElementById("sort-btn"),"click",btnHandle);
     }
 
     init();
