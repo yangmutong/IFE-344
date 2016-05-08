@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="this is the task 02">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>task</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0px;
+			background-color: #aaa;
+		}
+		.header{
+			background-color: #000;
+			position: fixed;
+			top:0;
+			right: 0;
+			left: 0;
+			margin:auto;
+			height: auto;
+		}
+		.nav{
+			line-height: 24px;
+    		height: 24px;
+			list-style-type:none;
+		}
+		.nav li{
+			display: inline-block;
+			float: left;
+		}
+		.nav a{
+			text-decoration: none;
+			color: #fff;
+			padding: 10px;
+		}
+		a:hover{
+			color: rgb(128,52,95);
+			cursor: default;
+		}
+		a::selection{
+			color: #000;
+			background-color: #fff;
+		}
+
+		#form{
+			margin-top: 100px;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var form = document.getElementById("form");
+			var all = document.getElementById("all");
+			var sub1 = document.getElementById("sub1");
+			var sub2 = document.getElementById("sub2");
+			form.addEventListener("click",function(event){
+				if (event.target.id == "all"){
+					if(all.checked) {
+						sub1.checked = true;
+						sub2.checked = true;
+					}else {
+						sub1.checked = false;
+						sub2.checked = false;
+					}
+				}else if(event.target.id == "sub1"){
+					if(!sub1.checked){
+						all.checked = false;
+					}
+				}else if(event.target.id == "sub2"){
+					if(!sub2.checked){
+						all.checked = false;
+					}
+				}
+				if(sub1.checked && sub2.checked){
+					all.checked = true;
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<div class="main">
+		<header class="header">
+			<ul class="nav">
+			    <li><a href="">导航链接一</a></li>
+			    <li><a href="">导航链接二</a></li>
+			    <li><a href="">导航链接三</a></li>
+			    <li><a href="">导航链接四</a></li>
+			</ul>
+		</header>
+		<div id="form">
+			<input type="checkbox" id="all">全选</input>
+			<input type="checkbox" id="sub1" class="sub">一</input>
+			<input type="checkbox" id="sub2" class="sub">二</input>
+		</div>
+	</div>
+</body>	
+</html>
