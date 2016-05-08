@@ -1,0 +1,345 @@
+body{
+    background-color: rgb(243,243,243);
+}
+i.material-icons{
+    color: #f77a64;
+}
+p,span
+{
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+
+
+img.user-avatar{
+    box-sizing: border-box;
+    width: 72px;
+    height: 72px;
+    padding: 2px;
+
+    border: 2px solid #fff;
+    border-radius: 36px;
+}
+
+
+header.pageHeader div.mdl-layout__header-row{
+    padding: 0;
+}
+header.pageHeader h2{
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+header.pageHeader i.material-icons{
+    color: #fff;
+}
+header.pageHeader>div.mdl-layout__drawer-button{
+    right: 0;
+    left: auto;
+}
+header.pageHeader > #home{
+    width: 48px;
+    height: 48px;
+    margin: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header.pageHeader > #home > i{
+    margin: auto;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+#first-card,#second-card,#third-card{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+#first-card > div.mdl-card__title{
+    height: 360px;
+
+    background: url('../32.png') center / cover;
+}
+#first-card > div.mdl-card__title > #list{
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: -300px;
+}
+#first-card > div.mdl-card__title > #list > div.list-item{
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid #bababa;
+    -webkit-border-radius: 5px 5px;
+       -moz-border-radius: 5px 5px;
+            border-radius: 5px 5px;
+    background-color: transparent;
+}
+#first-card > div.mdl-card__title > #list > div.current-item{
+    background-color: #bababa;
+}
+
+#first-card > div.mdl-card__supporting-text{
+    display: flex;
+
+    padding: 8px;
+
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#first-card > div.mdl-card__supporting-text > div.price{
+    padding: 5px;
+
+    border-right: 1px solid #d0d0d0;
+}
+#first-card > div.mdl-card__supporting-text > div.price p{
+    font-size: 16px;
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: auto;
+
+    color: #f77a64;
+}
+
+#first-card > div.mdl-card__supporting-text > div.item{
+    margin-top: -6px;
+    margin-left: 16px;
+
+    flex-grow: 2;
+}
+
+#first-card > div.mdl-card__supporting-text > div.item > div.itemTitle{
+    font-size: 16px;
+}
+#first-card > div.mdl-card__supporting-text > div.item > div.item-view{
+    display: flex;
+
+    height: 18px;
+    margin-top: -16px;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#first-card > div.mdl-card__supporting-text > div.item > div.item-view *{
+    font-size: 12px;
+
+    display: inline-block;
+}
+
+
+#second-card{
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#second-card > div.item-detail-title > h4{
+    font-size: 14px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+
+    width: auto;
+    margin: 0;
+    padding: 2px 18px;
+
+    color: #fff;
+    background-color: #f77a64;
+}
+#second-card > div.item-detail-title > #title-triangle{
+    width: 0;
+    height: 0;
+
+    border-top: 50px solid #f77a64;
+    border-right: 60px solid transparent;
+}
+#second-card > div.item-detail{
+    margin-top: -30px;
+    margin-left: 90px;
+}
+
+#second-card > div.item-detail p.detail{
+    display: inline;
+}
+
+#second-card > div.item-detail > #exchange-plan{
+    font-size: 12px;
+
+    display: flex;
+
+    margin: 24px 0;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#third-card > div.mdl-card__supporting-text{
+    display: flex;
+
+    margin: auto;
+
+    text-align: center;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#third-card div.message-photo figure{
+    margin: 0;
+}
+
+#third-card div.message-detail{
+    margin-left: -3rem;
+
+    flex-grow: 2;
+}
+
+#third-card div.message-detail div{
+    margin: 12px;
+}
+
+#third-card div.message-detail div a{
+    position: absolute;
+    right: 20px;
+
+    color: #000;
+}
+#third-card div.message-detail div a:active{
+    color: #f77a64;
+}
+#third-card img.user-avatar{
+    border-color: #f77a64;
+}
+
+#third-card #user-name,#user-level{
+    display: inline-block;
+
+    margin-top: 1.3rem;
+
+    text-transform: capitalize;
+
+    color: #f77a64;
+}
+
+div.mdl-layout__drawer{
+    width: 80%;
+
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+}
+div.mdl-layout__drawer.is-visible{
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+}
+div.mdl-layout__drawer i{
+    transform: translateY(5px);
+}
+div.mdl-layout__drawer > header.drawer-header{
+    display: flex;
+
+    padding: 2rem;
+
+    background-color: #ff9800;
+
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+div.mdl-layout__drawer > header.drawer-header div:first-child{
+    margin: auto;
+
+    flex-grow: 2;
+}
+div.mdl-layout__drawer > header.drawer-header div:last-child{
+    text-align: right;
+
+    flex-grow: 3;
+}
+div.mdl-layout__drawer > header.drawer-header div.log a,p{
+    display: inline-block;
+}
+div.mdl-layout__drawer > header.drawer-header div.log p{
+    font-size: 1.2rem;
+}
+div.mdl-layout__drawer > header.drawer-header div.log i{
+    color: #fff;;
+}
+
+div.mdl-layout__drawer > header.drawer-header p,a,i{
+    color: #fff;
+}
+
+div.mdl-layout__drawer > div.drawer-location{
+    display: flex;
+
+    background-color: #fff;
+
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+div.mdl-layout__drawer > div.drawer-location a{
+    color: #000;;
+}
+
+div.mdl-layout__drawer > div.drawer-list{
+    font-size: 24px;
+
+    display: flex;
+
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+div.mdl-layout__drawer > div.drawer-list a{
+    font-size: 16px;
+
+    color: #000;
+}
+div.mdl-layout__drawer > div.drawer-list a:active
+{
+    color: #f77a64;
+}
+div.mdl-layout__drawer > div.drawer-list ul{
+    list-style-type: none;
+}
+div.mdl-layout__drawer > div.drawer-list ul.catalog{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-around;
+
+    background-image: url('../icons/nav_list_icon.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+div.mdl-layout__drawer > div.drawer-list > ul.catalog li{
+    margin: 5px 0;
+}
+div.mdl-layout__drawer > div.drawer-list > div.line{
+    border-right: 1px solid #ff9800;
+}
+div.mdl-layout__drawer > div.drawer-list > ul.other li{
+    margin: 20% 0;
+}
+div.mdl-layout__drawer > div.drawer-list > ul.other i{
+    margin-right: 30px;
+    margin-left: -40px;
+}
