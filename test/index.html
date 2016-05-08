@@ -50,37 +50,52 @@
 		}
 	</style>
 	<script>
+		function changeState(ele,state){
+			if(ele.length > 0){
+				for (var a in ele){
+					ele[a].checked = state;
+				}
+			}
+		}
+		function isAllTrue(ele){
+			var state = 0;
+			if(ele.length > 0){
+				for (var a = 0;a < ele.length;a++) {
+					if (!ele[a].checked) {
+						state++;
+					}
+				}
+				return state;
+			}
+
+		}
 		window.onload = function() {
 			var form = document.getElementById("form");
 			var all = document.getElementById("all");
 			var sub1 = document.getElementById("sub1");
 			var sub2 = document.getElementById("sub2");
+			var subArr = document.getElementsByClassName("sub");
 			form.addEventListener("click",function(event){
+				console.log(event.target.className);
 				if (event.target.id == "all"){
 					if(all.checked) {
-						sub1.checked = true;
-						sub2.checked = true;
+						changeState(subArr,true);
 					}else {
-						sub1.checked = false;
-						sub2.checked = false;
+						changeState(subArr,false);
 					}
-				}else if(event.target.id == "sub1"){
-					if(!sub1.checked){
-						all.checked = false;
-					}
-				}else if(event.target.id == "sub2"){
-					if(!sub2.checked){
+				}else if(event.target.className == "sub"){
+					if(!event.target.checked){
 						all.checked = false;
 					}
 				}
-				if(sub1.checked && sub2.checked){
+				if(isAllTrue(subArr) == 0){
 					all.checked = true;
 				}
 			});
 		}
 	</script>
 </head>
-<body>
+<body>`
 	<div class="main">
 		<header class="header">
 			<ul class="nav">
